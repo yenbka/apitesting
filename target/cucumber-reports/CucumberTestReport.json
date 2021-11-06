@@ -1,0 +1,98 @@
+[
+  {
+    "line": 20,
+    "elements": [
+      {
+        "start_timestamp": "2021-11-05T19:00:44.375Z",
+        "line": 32,
+        "name": "Validate post a customer success",
+        "description": "",
+        "id": "customer-feature;validate-post-a-customer-success;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2989397800,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I post a customer",
+            "match": {
+              "location": "stepsdef.Customer.i_post_a_customer(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "first_name",
+                  "last_name",
+                  "phone",
+                  "email",
+                  "birthday",
+                  "sex",
+                  "province_code",
+                  "district_code",
+                  "country_code",
+                  "address",
+                  "note"
+                ]
+              },
+              {
+                "cells": [
+                  "yến",
+                  "nguyễn",
+                  "0963555788",
+                  "yennth4@sapo.vn",
+                  "1635872400",
+                  "female",
+                  "Dak-Lak",
+                  "Huyen-Krong-Ana",
+                  "VN",
+                  "địa chỉ cụ thể",
+                  "KH vui tính"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "junit.framework.AssertionFailedError: expected:\u003c200\u003e but was:\u003c400\u003e\r\n\tat junit.framework.Assert.fail(Assert.java:57)\r\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\r\n\tat junit.framework.Assert.assertEquals(Assert.java:78)\r\n\tat junit.framework.Assert.assertEquals(Assert.java:234)\r\n\tat junit.framework.Assert.assertEquals(Assert.java:241)\r\n\tat stepsdef.Customer.i_verify_post_customer_success(Customer.java:49)\r\n\tat ✽.I verify post customer success(file:///C:/Users/Hai%20Yen/eclipse-workspace/fnb-apitesting/features/Customer.feature:28)\r\n",
+              "duration": 73772200,
+              "status": "failed"
+            },
+            "line": 28,
+            "name": "I verify post customer success",
+            "match": {
+              "location": "stepsdef.Customer.i_verify_post_customer_success()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tag"
+          },
+          {
+            "name": "@post"
+          }
+        ]
+      }
+    ],
+    "name": "Customer Feature",
+    "description": "  I want to test API Customer",
+    "id": "customer-feature",
+    "keyword": "Feature",
+    "uri": "file:features/Customer.feature",
+    "tags": [
+      {
+        "name": "@tag",
+        "type": "Tag",
+        "location": {
+          "line": 19,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
