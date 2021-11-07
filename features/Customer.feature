@@ -21,12 +21,11 @@ Feature: Customer Feature
   I want to test API Customer
 
   @post
-  Scenario Outline: Validate post a customer success
+  Scenario: Validate post a customer success
     When I post a customer
-      | first_name   | last_name   | phone   | email   | birthday   | sex   | province_code   | district_code   | country_code   | address   | note   |
-      | <first_name> | <last_name> | <phone> | <email> | <birthday> | <sex> | <province_code> | <district_code> | <country_code> | <address> | <note> |
+      | first_name | last_name | email           | birthday   | sex    | province_code | district_code   | country_code | address        | note        | state  |
+      | Thập       | nguyễn    | yennth4@sapo.vn | 1635872400 | female | Dak-Lak       | Huyen-Krong-Ana | VN           | địa chỉ cụ thể | KH vui tính | enable |
     Then I verify post customer success
 
-    Examples: 
-      | first_name | last_name | phone      | email           | birthday   | sex    | province_code | district_code   | country_code | address        | note        |
-      | yến        | nguyễn    | 0963555788 | yennth4@sapo.vn | 1635872400 | female | Dak-Lak       | Huyen-Krong-Ana | VN           | địa chỉ cụ thể | KH vui tính |
+  Scenario: Get customer
+    When I get list customer
