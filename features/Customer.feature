@@ -21,11 +21,18 @@ Feature: Customer Feature
   I want to test API Customer
 
   @post
-  Scenario: Validate post a customer success
+  Scenario: POST customer
     When I post a customer
       | first_name | last_name | email           | birthday   | sex    | province_code | district_code   | country_code | address        | note        | state  |
       | Thập       | nguyễn    | yennth4@sapo.vn | 1635872400 | female | Dak-Lak       | Huyen-Krong-Ana | VN           | địa chỉ cụ thể | KH vui tính | enable |
     Then I verify post customer success
 
-  Scenario: Get customer
-    When I get list customer
+  Scenario: PUT customer
+    When I get customer
+    When I put customer
+      | first_name | last_name | email           | birthday   | sex   | province_code | district_code | country_code | address | note        | state  |
+      | Yến update | nguyễn    | yennth5@sapo.vn | 1635094800 | other | Thai-Binh     | Huyen-Hung-Ha | VN           | abc     | Note Update | enable |
+
+  Scenario: DELETE customer
+    When I get customer
+    When I delete customer

@@ -3,17 +3,17 @@
     "line": 20,
     "elements": [
       {
-        "start_timestamp": "2021-11-07T18:51:43.161Z",
+        "start_timestamp": "2021-11-08T16:41:30.199Z",
         "line": 24,
-        "name": "Validate post a customer success",
+        "name": "POST customer",
         "description": "",
-        "id": "customer-feature;validate-post-a-customer-success",
+        "id": "customer-feature;post-customer",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 2503492100,
+              "duration": 2746585700,
               "status": "passed"
             },
             "line": 25,
@@ -57,7 +57,7 @@
           },
           {
             "result": {
-              "duration": 745013500,
+              "duration": 886088800,
               "status": "passed"
             },
             "line": 28,
@@ -78,23 +78,107 @@
         ]
       },
       {
-        "start_timestamp": "2021-11-07T18:51:46.526Z",
+        "start_timestamp": "2021-11-08T16:41:33.967Z",
         "line": 30,
-        "name": "Get customer",
+        "name": "PUT customer",
         "description": "",
-        "id": "customer-feature;get-customer",
+        "id": "customer-feature;put-customer",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 821008800,
+              "duration": 925831800,
               "status": "passed"
             },
             "line": 31,
-            "name": "I get list customer",
+            "name": "I get customer",
             "match": {
-              "location": "stepsdef.Customer.i_get_list_customer()"
+              "location": "stepsdef.Customer.i_get_customer()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 511304100,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "I put customer",
+            "match": {
+              "location": "stepsdef.Customer.i_put_customer(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "first_name",
+                  "last_name",
+                  "email",
+                  "birthday",
+                  "sex",
+                  "province_code",
+                  "district_code",
+                  "country_code",
+                  "address",
+                  "note",
+                  "state"
+                ]
+              },
+              {
+                "cells": [
+                  "Yến update",
+                  "nguyễn",
+                  "yennth5@sapo.vn",
+                  "1635094800",
+                  "other",
+                  "Thai-Binh",
+                  "Huyen-Hung-Ha",
+                  "VN",
+                  "abc",
+                  "Note Update",
+                  "enable"
+                ]
+              }
+            ],
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tag"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-08T16:41:35.418Z",
+        "line": 36,
+        "name": "DELETE customer",
+        "description": "",
+        "id": "customer-feature;delete-customer",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 849145200,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "I get customer",
+            "match": {
+              "location": "stepsdef.Customer.i_get_customer()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 388126300,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "I delete customer",
+            "match": {
+              "location": "stepsdef.Customer.i_delete_customer()"
             },
             "keyword": "When "
           }

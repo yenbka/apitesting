@@ -16,6 +16,21 @@ public class Base {
 				.header(token.getKey(), token.getToken())
 				.header("Content-Type", "application/json").body(body).post();
 	}
+	
+	public Response putObject(String uri, String id, String body) {
+		return response = given().log().all()
+				.header(token.getKey(), token.getToken())
+				.header("Content-Type", "application/json")
+				.body(body)
+				.put(uri+id+".json");
+	}
+	
+	public Response deleteObject(String uri, String id) {
+		return response = given().log().all()
+				.header(token.getKey(), token.getToken())
+				.header("Content-Type", "application/json")
+				.delete(uri+id+".json");
+	}
 
 	public Response getListObject(String url) {
 		return response = given()
@@ -23,10 +38,9 @@ public class Base {
 				.get(url);
 	}
 
-	public Response getObjectById(String uri, String path, String id) {
+	public Response getObjectById(String uri, String id) {
 		return response = given()
 				.baseUri(uri)
-				.basePath(path)
 				.header(token.getKey(), token.getToken())
 				.get("/"+id+".json");
 	}

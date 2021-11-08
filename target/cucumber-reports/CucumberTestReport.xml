@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="4.455">
-    <testcase classname="Customer Feature" name="Validate post a customer success" time="3.353">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="6.817">
+    <testcase classname="Customer Feature" name="POST customer" time="3.747">
         <system-out><![CDATA[When I post a customer......................................................passed
 Then I verify post customer success.........................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Customer Feature" name="Get customer" time="0.823">
-        <system-out><![CDATA[When I get list customer....................................................passed
+    <testcase classname="Customer Feature" name="PUT customer" time="1.445">
+        <system-out><![CDATA[When I get customer.........................................................passed
+When I put customer.........................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Customer Feature" name="DELETE customer" time="1.241">
+        <system-out><![CDATA[When I get customer.........................................................passed
+When I delete customer......................................................passed
 ]]></system-out>
     </testcase>
 </testsuite>
