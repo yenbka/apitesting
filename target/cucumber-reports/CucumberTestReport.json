@@ -3,7 +3,7 @@
     "line": 20,
     "elements": [
       {
-        "start_timestamp": "2021-11-08T16:41:30.199Z",
+        "start_timestamp": "2021-11-09T03:05:25.812Z",
         "line": 24,
         "name": "POST customer",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2746585700,
+              "duration": 2955655600,
               "status": "passed"
             },
             "line": 25,
@@ -57,7 +57,7 @@
           },
           {
             "result": {
-              "duration": 886088800,
+              "duration": 111700900,
               "status": "passed"
             },
             "line": 28,
@@ -78,7 +78,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-11-08T16:41:33.967Z",
+        "start_timestamp": "2021-11-09T03:05:29.045Z",
         "line": 30,
         "name": "PUT customer",
         "description": "",
@@ -88,7 +88,7 @@
         "steps": [
           {
             "result": {
-              "duration": 925831800,
+              "duration": 1621623900,
               "status": "passed"
             },
             "line": 31,
@@ -100,7 +100,7 @@
           },
           {
             "result": {
-              "duration": 511304100,
+              "duration": 383832900,
               "status": "passed"
             },
             "line": 32,
@@ -150,7 +150,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-11-08T16:41:35.418Z",
+        "start_timestamp": "2021-11-09T03:05:31.056Z",
         "line": 36,
         "name": "DELETE customer",
         "description": "",
@@ -160,7 +160,7 @@
         "steps": [
           {
             "result": {
-              "duration": 849145200,
+              "duration": 613994200,
               "status": "passed"
             },
             "line": 37,
@@ -172,7 +172,7 @@
           },
           {
             "result": {
-              "duration": 388126300,
+              "duration": 342085500,
               "status": "passed"
             },
             "line": 38,

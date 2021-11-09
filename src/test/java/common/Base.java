@@ -9,40 +9,43 @@ public class Base {
 	Response response;
 	Token token = new Token();
 
-	public Response postObject(String uri, String path, String body) {
+	public Response postObject(String domain, String cate, String body) {
 		return response = given()
-				.baseUri(uri)
-				.basePath(path)
+				.baseUri(domain)
+				.basePath(cate + ".json")
 				.header(token.getKey(), token.getToken())
-				.header("Content-Type", "application/json").body(body).post();
+				.header("Content-Type", "application/json")
+				.body(body)
+				.post();
 	}
-	
-	public Response putObject(String uri, String id, String body) {
+
+	public Response putObject(String domain, String cate, String id, String body) {
 		return response = given().log().all()
 				.header(token.getKey(), token.getToken())
 				.header("Content-Type", "application/json")
 				.body(body)
-				.put(uri+id+".json");
+				.put(domain + cate + "/" + id + ".json");
 	}
-	
-	public Response deleteObject(String uri, String id) {
+
+	public Response deleteObject(String domain, String cate, String id) {
 		return response = given().log().all()
 				.header(token.getKey(), token.getToken())
 				.header("Content-Type", "application/json")
-				.delete(uri+id+".json");
+				.delete(domain + cate + "/" + id + ".json");
 	}
 
-	public Response getListObject(String url) {
+	public Response getListObject(String domain, String cate) {
 		return response = given()
 				.header(token.getKey(), token.getToken())
-				.get(url);
+				.get(domain + cate + ".json");
 	}
 
-	public Response getObjectById(String uri, String id) {
+	public Response getObjectById(String domain, String cate, String id) {
 		return response = given()
-				.baseUri(uri)
+				.baseUri(domain)
+				.basePath(cate)
 				.header(token.getKey(), token.getToken())
-				.get("/"+id+".json");
+				.get("/" + id + ".json");
 	}
 
 	public int getStatusCode() {
@@ -54,7 +57,7 @@ public class Base {
 	}
 
 	public String getValueWithKey(String key) {
-		JsonPath jsonPathEvaluator = response.jsonPath();
-		return jsonPathEvaluator.get(key);
+		JsonPath js = new JsonPath(response.asString());
+		return js.getString(key);
 	}
 }

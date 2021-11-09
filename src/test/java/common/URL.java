@@ -1,15 +1,12 @@
 package common;
 
 public class URL {
-	String URI = "https://fnb.mysapo.vn/admin";
-	String edp_customer = "/customers.json";
-	public String getURI() {
-		return URI;
+	String domain = "https://fnb.mysapo.vn/admin";
+	String cate_cus = "/customers";
+	public String getDomain() {
+		return domain;
 	}
-
-	public String getEdp_customer() {
-		return edp_customer;
+	public String getCate_cus() {
+		return cate_cus;
 	}
-	
-	
 }

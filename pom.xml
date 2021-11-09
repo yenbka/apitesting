@@ -46,13 +46,6 @@
 			<artifactId>cucumber-core</artifactId>
 			<version>6.11.0</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
-		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>6.14.3</version>
-			<scope>test</scope>
-		</dependency>
 		<dependency>
 			<groupId>net.masterthought</groupId>
 			<artifactId>cucumber-reporting</artifactId>
@@ -84,10 +77,6 @@
 			<artifactId>json-simple</artifactId>
 			<version>1.1.1</version>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-		<!-- <dependency> <groupId>org.projectlombok</groupId> <artifactId>lombok</artifactId> 
-			<version>1.18.12</version> <scope>provided</scope> </dependency> -->
 	</dependencies>
 	<build>
 		<plugins>
